@@ -1,10 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
 /* make keyframes that tell the start state and the end state of our object */
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
 
 body{
+  font-family: 'Lato', sans-serif;
+  font: 15px;
+  font-weight: 700;
+  color: white;
 	background-color: #3399cc;
 }
    
@@ -23,12 +32,78 @@ body{
   animation-duration:1.5s;
 }
 
- #logo{
+ .personal-logo {
+  height: 100%;
+  min-height: 100%;
 
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-  opacity:0;
+  /* habilita o flex nos filhos diretos */
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+
+  /* centraliza na vertical */
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+
+  /* centraliza na horizontal */
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.personal-logo div {
+  padding: 40px;
+  
+}
+ 
+
+ li{
+  list-style: none;
+ }
+
+
+ #social-icons ul { 
+  padding:0px;
+  margin:0px;
+  list-style:none;
+  text-align: center;
+}
+
+ #social-icons ul li { 
+  display: inline;
+}
+
+ #social-icons ul li a {
+  padding: 20px;
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, .4);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s eas;
+
 
 }
+
+ #social-icons ul li a:hover {
+    color:white ;
+ }
+
+#social-icons{
+  margin-top: 30px;
+ padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+/* margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  opacity:0; */
 
