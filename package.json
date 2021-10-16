@@ -13,11 +13,13 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "deploy": "yarn build && gh-pages -d dist"
   },
   "devDependencies": {
     "@astrojs/renderer-svelte": "^0.1.2",
     "astro": "^0.20.11",
+    "gh-pages": "^3.2.3",
     "tailwindcss": "^2.2.17"
   }
 }
