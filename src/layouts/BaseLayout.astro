@@ -1,0 +1,27 @@
+---
+	import Header from '../components/Header/index.svelte';
+	import Footer from '../components/Footer.svelte';
+
+	const {title} = Astro.props;
+	const defaultTitle = "romulomourao // Code, Sleep, Repeat";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/x-icon" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" type="text/css" href={Astro.resolve('../styles/global.css')}>
+		<title>{title || defaultTitle }</title>
+	</head>
+
+	<body class="bg-gray-50">
+		<Header/>
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="max-w-3xl mx-auto">
+				<slot/>
+			</div>
+		</div>
+		<Footer/>
+	</body>
+</html>
