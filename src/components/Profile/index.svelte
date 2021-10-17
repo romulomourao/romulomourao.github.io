@@ -6,13 +6,11 @@
 
 <style>
 	.bg-img {
-		background-image: url('./images/profile.jpg');
 		background-position: top center;
 	}
 </style>
 
 <div class="max-w-4xl flex items-center h-auto  flex-wrap mx-auto lg:my-0">
-
 	<div class="w-full lg:w-2/5">
 		<img src={profileImg} class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block" alt="profile image">
 	</div>
@@ -21,7 +19,7 @@
 
 		<div class="p-4 md:p-12 text-center lg:text-left">
 			<!-- Image for mobile view-->
-			<div class="block lg:hidden rounded-full shadow-xl mx-auto -mt-32 h-48 w-48 bg-cover bg-center bg-img border-8 border-white"></div>
+			<div style="background-image: url('{profileImg}');" class="block lg:hidden rounded-full shadow-xl mx-auto -mt-32 h-48 w-48 bg-cover bg-center bg-img border-8 border-white"></div>
 
 			<h1 class="text-3xl font-bold text-gray-900 pt-8 lg:pt-0">Romulo Mourão</h1>
 			<p class="pt-4 text-base font-bold flex items-center justify-center lg:justify-start">
